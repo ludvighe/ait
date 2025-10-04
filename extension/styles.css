@@ -1,0 +1,70 @@
+:root {
+  --clr-background: #1a1a1a;
+  --clr-foreground: #f5f5f3;
+  --clr-accent: #ffb374;
+  --clr-accent-transparent: #ffb37422;
+  --clr-accent-light: #ffd8b1;
+  --clr-muted: #888888;
+}
+
+body {
+  background-color: var(--clr-background);
+  color: var(--clr-foreground);
+  font-family: sans-serif;
+  padding: 1em;
+  min-width: 400px;
+}
+
+h1 {
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 200px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  li {
+    padding: 0 0.2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    width: 100%;
+    transition: 50ms ease;
+  }
+}
+
+li:hover {
+  background-color: var(--clr-accent-transparent);
+}
+
+input,
+button {
+  margin: 0.25em 0;
+  padding: 0.4em 0.6em;
+  border: none;
+  border-radius: 4px;
+}
+
+input,
+textarea {
+  background: var(--clr-background);
+  color: var(--clr-foreground);
+  outline-color: var(--clr-accent);
+  border-color: var(--clr-accent);
+}
+
+button {
+  background: var(--clr-accent);
+  color: var(--clr-background);
+  cursor: pointer;
+  transition: 50ms ease;
+}
+
+button:hover {
+  background: var(--clr-accent-light);
+}

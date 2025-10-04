@@ -1,0 +1,7 @@
+#!/bin/bash -eu
+
+ext_dir="extension"
+
+npx npx web-ext build -s "$ext_dir" --overwrite-dest
+[ "${1:-}" == "-r" ] && npx web-ext run -s "$ext_dir"
+npx npx web-ext lint -s "$ext_dir"

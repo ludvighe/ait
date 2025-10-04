@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "AIT",
+  "version": "1.0.0",
+  "description": "AIT Injects Things",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ait@ludvighe",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "icons": {
+    "48": "ait-logo-48.png",
+    "96": "ait-logo-96.png",
+    "128": "ait-logo.png"
+  }
+}
